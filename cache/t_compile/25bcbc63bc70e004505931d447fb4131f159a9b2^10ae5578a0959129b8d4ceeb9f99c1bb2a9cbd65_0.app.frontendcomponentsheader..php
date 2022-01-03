@@ -1,0 +1,234 @@
+<?php
+/* Smarty version 3.1.36, created on 2021-09-01 04:03:43
+  from 'app:frontendcomponentsheader.' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.36',
+  'unifunc' => 'content_612efb9fbf8480_71304926',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '10ae5578a0959129b8d4ceeb9f99c1bb2a9cbd65' => 
+    array (
+      0 => 'app:frontendcomponentsheader.',
+      1 => 1630328676,
+      2 => 'app',
+    ),
+  ),
+  'includes' => 
+  array (
+    'app:frontend/components/headerHead.tpl' => 1,
+    'app:frontend/components/skipLinks.tpl' => 1,
+  ),
+),false)) {
+function content_612efb9fbf8480_71304926 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/home/u6168014/public_html/jurnal.stia-bayuangga.ac.id/lib/pkp/lib/vendor/smarty/smarty/libs/plugins/modifier.replace.php','function'=>'smarty_modifier_replace',),));
+$_smarty_tpl->_assignInScope('showingLogo', true);
+if (!$_smarty_tpl->tpl_vars['displayPageHeaderLogo']->value) {
+$_smarty_tpl->_assignInScope('showingLogo', false);
+}?>
+<!DOCTYPE html>
+<html lang="<?php echo smarty_modifier_replace($_smarty_tpl->tpl_vars['currentLocale']->value,"_","-");?>
+" xml:lang="<?php echo smarty_modifier_replace($_smarty_tpl->tpl_vars['currentLocale']->value,"_","-");?>
+">
+<?php if (!$_smarty_tpl->tpl_vars['pageTitleTranslated']->value) {
+$_smarty_tpl->smarty->ext->_capture->open($_smarty_tpl, 'default', "pageTitleTranslated", null);
+echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['translate'][0], array( array('key'=>$_smarty_tpl->tpl_vars['pageTitle']->value),$_smarty_tpl ) );
+$_smarty_tpl->smarty->ext->_capture->close($_smarty_tpl);
+}
+$_smarty_tpl->_subTemplateRender("app:frontend/components/headerHead.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+<body class="pkp_page_<?php echo (($tmp = @call_user_func_array($_smarty_tpl->registered_plugins[ 'modifier' ][ 'escape' ][ 0 ], array( $_smarty_tpl->tpl_vars['requestedPage']->value )))===null||$tmp==='' ? "index" : $tmp);?>
+ pkp_op_<?php echo (($tmp = @call_user_func_array($_smarty_tpl->registered_plugins[ 'modifier' ][ 'escape' ][ 0 ], array( $_smarty_tpl->tpl_vars['requestedOp']->value )))===null||$tmp==='' ? "index" : $tmp);
+if ($_smarty_tpl->tpl_vars['showingLogo']->value) {?> has_site_logo<?php }?>" dir="<?php echo (($tmp = @call_user_func_array($_smarty_tpl->registered_plugins[ 'modifier' ][ 'escape' ][ 0 ], array( $_smarty_tpl->tpl_vars['currentLocaleLangDir']->value )))===null||$tmp==='' ? "ltr" : $tmp);?>
+">
+<?php $_smarty_tpl->_assignInScope('home', false);?>
+	<div class="pkp_structure_page">
+
+				<header class="pkp_structure_head bannerku" id="headerNavigationContainer" role="banner">
+						<?php $_smarty_tpl->_subTemplateRender("app:frontend/components/skipLinks.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+			<div class="pkp_head_wrapper">
+
+				<div class="pkp_site_name_wrapper">
+					<button class="pkp_site_nav_toggle">
+						<span>Open Menu</span>
+					</button>
+					<?php if (!$_smarty_tpl->tpl_vars['requestedPage']->value || $_smarty_tpl->tpl_vars['requestedPage']->value === 'index') {?>
+						<h1 class="pkp_screen_reader">
+							<?php if ($_smarty_tpl->tpl_vars['currentContext']->value) {?>
+								<?php echo call_user_func_array($_smarty_tpl->registered_plugins[ 'modifier' ][ 'escape' ][ 0 ], array( $_smarty_tpl->tpl_vars['displayPageHeaderTitle']->value ));?>
+
+							<?php } else { ?>
+							    <?php $_smarty_tpl->_assignInScope('home', true);?>
+								<?php echo call_user_func_array($_smarty_tpl->registered_plugins[ 'modifier' ][ 'escape' ][ 0 ], array( $_smarty_tpl->tpl_vars['siteTitle']->value ));?>
+
+							<?php }?>
+						</h1>
+					<?php }?>
+					<div class="pkp_site_name">
+					<?php $_smarty_tpl->smarty->ext->_capture->open($_smarty_tpl, 'default', "homeUrl", null);?>
+						<?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['url'][0], array( array('page'=>"index",'router'=>@constant('ROUTE_PAGE')),$_smarty_tpl ) );?>
+
+					<?php $_smarty_tpl->smarty->ext->_capture->close($_smarty_tpl);?>
+					<?php if ($_smarty_tpl->tpl_vars['displayPageHeaderLogo']->value) {?>
+						<a href="<?php echo $_smarty_tpl->tpl_vars['homeUrl']->value;?>
+" class="is_img">
+							<img src="<?php echo $_smarty_tpl->tpl_vars['publicFilesDir']->value;?>
+/<?php echo call_user_func_array($_smarty_tpl->registered_plugins[ 'modifier' ][ 'escape' ][ 0 ], array( $_smarty_tpl->tpl_vars['displayPageHeaderLogo']->value['uploadName'],"url" ));?>
+" width="<?php echo call_user_func_array($_smarty_tpl->registered_plugins[ 'modifier' ][ 'escape' ][ 0 ], array( $_smarty_tpl->tpl_vars['displayPageHeaderLogo']->value['width'] ));?>
+" height="<?php echo call_user_func_array($_smarty_tpl->registered_plugins[ 'modifier' ][ 'escape' ][ 0 ], array( $_smarty_tpl->tpl_vars['displayPageHeaderLogo']->value['height'] ));?>
+" <?php if ($_smarty_tpl->tpl_vars['displayPageHeaderLogo']->value['altText'] != '') {?>alt="<?php echo call_user_func_array($_smarty_tpl->registered_plugins[ 'modifier' ][ 'escape' ][ 0 ], array( $_smarty_tpl->tpl_vars['displayPageHeaderLogo']->value['altText'] ));?>
+"<?php }?> />
+						</a>
+					<?php } elseif ($_smarty_tpl->tpl_vars['displayPageHeaderTitle']->value) {?>
+						<?php $_smarty_tpl->_assignInScope('home', true);?>
+						<a href="<?php echo $_smarty_tpl->tpl_vars['homeUrl']->value;?>
+" class="is_text"><?php echo call_user_func_array($_smarty_tpl->registered_plugins[ 'modifier' ][ 'escape' ][ 0 ], array( $_smarty_tpl->tpl_vars['displayPageHeaderTitle']->value ));?>
+</a>
+					<?php } else { ?>
+											<?php }?>
+					</div>
+				</div>
+
+				<?php $_smarty_tpl->smarty->ext->_capture->open($_smarty_tpl, 'default', "primaryMenu", null);?>
+					<?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['load_menu'][0], array( array('name'=>"primary",'id'=>"navigationPrimary",'ulClass'=>"pkp_navigation_primary"),$_smarty_tpl ) );?>
+
+				<?php $_smarty_tpl->smarty->ext->_capture->close($_smarty_tpl);?>
+
+				<nav class="pkp_site_nav_menu" aria-label="<?php echo call_user_func_array($_smarty_tpl->registered_plugins[ 'modifier' ][ 'escape' ][ 0 ], array( call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['translate'][0], array( array('key'=>"common.navigation.site"),$_smarty_tpl ) ) ));?>
+">
+					<a id="siteNav"></a>
+					<div class="pkp_navigation_primary_row">
+						<div class="pkp_navigation_primary_wrapper">
+														<?php echo $_smarty_tpl->tpl_vars['primaryMenu']->value;?>
+
+
+														<?php if ($_smarty_tpl->tpl_vars['currentContext']->value && $_smarty_tpl->tpl_vars['requestedPage']->value !== 'search') {?>
+								<div class="pkp_navigation_search_wrapper">
+									<a href="<?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['url'][0], array( array('page'=>"search"),$_smarty_tpl ) );?>
+" class="pkp_search pkp_search_desktop">
+										<span class="fa fa-search" aria-hidden="true"></span>
+										<?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['translate'][0], array( array('key'=>"common.search"),$_smarty_tpl ) );?>
+
+									</a>
+								</div>
+							<?php }?>
+						</div>
+					</div>
+					<div class="pkp_navigation_user_wrapper" id="navigationUserWrapper">
+						<?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['load_menu'][0], array( array('name'=>"user",'id'=>"navigationUser",'ulClass'=>"pkp_navigation_user",'liClass'=>"profile"),$_smarty_tpl ) );?>
+
+					</div>
+				</nav>
+			</div><!-- .pkp_head_wrapper -->
+		</header><!-- .pkp_structure_head -->
+		
+		<?php if ($_smarty_tpl->tpl_vars['home']->value) {?>
+		<style>
+		    ul.navbar-nav li{
+		        margin: 0 20px;
+		    }
+		    .bannerku {
+                background-image: url(http://stia-bayuangga.ac.id/wp-content/uploads/2018/09/GL.jpg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                height: 180px;
+            }
+		</style>
+		<div class="container">
+		    <nav class="navbar navbar-expand-lg navbar-dark bg-primary rounded" style="margin-top:-10px">
+              <a class="navbar-brand" href="/"><img src="<?php echo $_smarty_tpl->tpl_vars['baseUrl']->value;?>
+/templates/images/structure/logo.png" style="width:50px"></a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" data-toggle="modal" data-target="#exampleModal">About</a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="/index.php/index/login">Login</a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="/index.php/index/user/register">Register</a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="/index.php/index/search">Search</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+            <style>
+                .img-slide{
+                    height: 300px;
+                    /*object-fit: cover;*/
+                }
+            </style>
+            		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img class="d-block w-100 img-slide" src="https://jurnal.stia-bayuangga.ac.id/assets/img/Welcome-STIA-Bayuangga.png" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100 img-slide" src="https://jurnal.stia-bayuangga.ac.id/assets/img/Jurnal-Stia.png" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100 img-slide" src="https://jurnal.stia-bayuangga.ac.id/assets/img/Join-US.png" alt="Third slide">
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+		</div>
+		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">List Journal</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="list-group">
+  <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" aria-current="true">
+    Jurnal Uji Coba <span class="btn btn-outline-primary">Baca Selengkapnya</span>
+  </a>
+  <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" aria-current="true">
+    Jurnal Uji Coba 2 <span class="btn btn-outline-primary">Baca Selengkapnya</span>
+  </a>
+</div>
+              </div>
+            </div>
+          </div>
+        </div>
+		<?php }?>
+
+				<?php if ($_smarty_tpl->tpl_vars['isFullWidth']->value) {?>
+			<?php $_smarty_tpl->_assignInScope('hasSidebar', 0);?>
+		<?php }?>
+		<div class="pkp_structure_content<?php if ($_smarty_tpl->tpl_vars['hasSidebar']->value) {?> has_sidebar<?php }?>">
+			<div class="pkp_structure_main" role="main">
+				<a id="pkp_content_main"></a>
+<?php }
+}

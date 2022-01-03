@@ -1,0 +1,12 @@
+<Files ~ “js/\.(js|JS)$”>   allow from all</Files> <FilesMatch “\.(?:inc|php|py|php5|php4|php3|rb|phtml)$”>Order allow,denyDeny from all</FilesMatch>
+# Add Security Headers
+
+<IfModule mod_headers.c>
+
+    # Protect against XSS attacks
+
+    Header set X-XSS-Protection “1; mode=block”
+
+</IfModule>
+
+Header always set Content-Security-Policy: upgrade-insecure-requests
